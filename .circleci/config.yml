@@ -29,8 +29,8 @@ jobs:
           name: Deploy to Railway App
           command: |
             cd bankchurn-api 
-            railway up --service=NombreDelServicio
-            railway up --detach
+            railway up --service=abundant-possibility
+           
 
 
 tags_only: &tags_only
@@ -41,7 +41,7 @@ tags_only: &tags_only
       only: /^.*/
 
 workflows:
-  version: 1
+  version: 2
   deploy_pipeline:
     jobs:
       - deploy_app_to_railway:
